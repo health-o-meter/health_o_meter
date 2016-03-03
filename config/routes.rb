@@ -15,8 +15,6 @@ Rails.application.routes.draw do
 
   get 'dashboard/show'
 
-  root 'dashboard#index'
-
   get 'exercises/index'
 
   get 'exercises/show'
