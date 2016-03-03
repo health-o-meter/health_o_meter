@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  get 'dashboard/index'
+
+  get 'dashboard/create'
+
+  get 'dashboard/new'
+
+  get 'dashboard/edit'
+
+  get 'dashboard/destroy'
+
+  get 'dashboard/update'
+
+  get 'dashboard/show'
+
+  root 'dashboard#index'
+
   get 'exercises/index'
 
   get 'exercises/show'
