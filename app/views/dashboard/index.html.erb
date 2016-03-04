@@ -1,2 +1,32 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<h1>Welcome to Health-O-Meter</h1>
+<h3>Check out your stats or submit a new entry.</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @weights.each do |weight| %>
+      <tr>
+        <td><%= weight.amount %></td>
+        <td><%= weight.date %></td>
+        <td><%= link_to 'Show', weight %></td>
+        <td><%= link_to 'Edit', edit_weight_path(weight) %></td>
+        <td><%= link_to 'Destroy', weight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+<%= link_to 'New Weight', new_weight_path %><br>
+<%= link_to 'New Step', new_step_path %><br>
+<%= link_to 'Add Calories Eaten', grubs_new_path %><br>
+<%= link_to 'Add Calories Burned', exercises_new_path %><br>

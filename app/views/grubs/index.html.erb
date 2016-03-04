@@ -1,2 +1,30 @@
-<h1>Grubs#index</h1>
-<p>Find me in app/views/grubs/index.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<h1>Food Journal</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @grubs.each do |grub| %>
+      <tr>
+        <td><%= grub.name %></td>
+        <td><%= grub.energy %></td>
+        <td><%= grub.date %></td>
+        <td><%= link_to 'Details', grub %></td>
+        <td><%= link_to 'Edit', edit_grub_path(grub) %></td>
+        <td><%= link_to 'Remove', grub, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add Another Entry', new_grub_path %>

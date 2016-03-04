@@ -1,23 +1,5 @@
 class DashboardController < ApplicationController
   def index
-  end
-
-  def create
-  end
-
-  def new
-        @weights = Weight.all
-  end
-
-  def edit
-  end
-
-  def destroy
-  end
-
-  def update
-  end
-
-  def show
+    @weights = Weight.all
   end
 end

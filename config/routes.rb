@@ -1,62 +1,10 @@
 Rails.application.routes.draw do
-  root 'dashboard#new'
+  root 'dashboard#index'
 
   get 'dashboard/index'
 
-  get 'dashboard/create'
-
-  get 'dashboard/new'
-
-  get 'dashboard/edit'
-
-  get 'dashboard/destroy'
-
-  get 'dashboard/update'
-
-  get 'dashboard/show'
-
-  get 'exercises/index'
-
-  get 'exercises/show'
-
-  get 'exercises/new'
-
-  get 'exercises/edit'
-
-  get 'exercises/create'
-
-  get 'exercises/update'
-
-  get 'exercises/destroy'
-
-  get 'exercise_types/index'
-
-  get 'exercise_types/show'
-
-  get 'exercise_types/new'
-
-  get 'exercise_types/edit'
-
-  get 'exercise_types/create'
-
-  get 'exercise_types/destroy'
-
-  get 'exercise_types/update'
-
-  get 'grubs/index'
-
-  get 'grubs/show'
-
-  get 'grubs/new'
-
-  get 'grubs/edit'
-
-  get 'grubs/create'
-
-  get 'grubs/destroy'
-
-  get 'grubs/update'
-
+  resources :exercises
+  resources :grubs
   resources :steps
   resources :weights
   # The priority is based upon order of creation: first created -> highest priority.
