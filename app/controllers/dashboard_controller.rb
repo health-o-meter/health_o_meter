@@ -6,6 +6,7 @@ class DashboardController < ApplicationController
   end
 
   def new
+        @weights = Weight.all
   end
 
   def edit
