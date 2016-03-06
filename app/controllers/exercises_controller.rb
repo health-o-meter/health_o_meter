@@ -24,7 +24,7 @@ class ExercisesController < ApplicationController
   # POST /exercises
   # POST /exercises.json
   def create
-    @exercise = exercise.new(exercise_params)
+    @exercise = Exercise.new(exercise_params)
 
     respond_to do |format|
       if @exercise.save
@@ -64,11 +64,11 @@ class ExercisesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_exercise
-      @exercise = exercise.find(params[:id])
+      @exercise = Exercise.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def exercise_params
-      params.require(:exercise).permit(:amount, :date)
+      params.require(:exercise).permit(:energy_burned, :date)
     end
 end
