@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'dashboard#index'
 
   get 'dashboard/index'
-
+  resources :exercise_types
   resources :exercises
   resources :grubs
   resources :steps
