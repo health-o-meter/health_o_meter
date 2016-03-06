@@ -4,7 +4,7 @@ class ExercisesController < ApplicationController
   # GET /exercises
   # GET /exercises.json
   def index
-    @exercises = exercise.all
+    @exercises = Exercise.all
   end
 
   # GET /exercises/1
@@ -14,7 +14,7 @@ class ExercisesController < ApplicationController
 
   # GET /exercises/new
   def new
-    @exercise = exercise.new
+    @exercise = Exercise.new
   end
 
   # GET /exercises/1/edit
