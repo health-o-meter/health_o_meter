@@ -15,7 +15,7 @@
     <% @grubs.each do |grub| %>
       <tr>
         <td><%= grub.name %></td>
-        <td><%= grub.energy %></td>
+        <td><%= grub.amount %></td>
         <td><%= grub.date %></td>
         <td><%= link_to 'Details', grub %></td>
         <td><%= link_to 'Edit', edit_grub_path(grub) %></td>

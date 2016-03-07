@@ -8,7 +8,7 @@ class Exercise < ActiveRecord::Base
       current_month = Time.now.mon
       daily = []
       self.all.each do |x|
-      daily << x.energy_burned if x.date.day == current_day && x.date.mon == current_month
+      daily << x.amount if x.date.day == current_day && x.date.mon == current_month
       end
       daily.sum
   end

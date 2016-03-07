@@ -14,7 +14,7 @@
   <tbody>
     <% @steps.each do |step| %>
       <tr>
-        <td><%= step.taken_steps %></td>
+        <td><%= step.amount %></td>
         <td><%= step.date %></td>
         <td><%= link_to 'Show', step %></td>
         <td><%= link_to 'Edit', edit_step_path(step) %></td>

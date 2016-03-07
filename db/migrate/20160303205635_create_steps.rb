@@ -1,7 +1,7 @@
 class CreateSteps < ActiveRecord::Migration
   def change
     create_table :steps do |t|
-      t.integer :taken_steps
+      t.integer :amount
       t.date :date
 
       t.timestamps null: false

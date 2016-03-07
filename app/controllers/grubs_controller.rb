@@ -45,6 +45,6 @@ class GrubsController < ApplicationController
     end
 
     def grub_params
-      params.require(:grub).permit(:energy, :date)
+      params.require(:grub).permit(:amount, :date)
     end
 end

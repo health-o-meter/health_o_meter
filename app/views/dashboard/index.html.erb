@@ -1,5 +1,5 @@
 <h1>Welcome to Health-O-Meter</h1>
-<h3>Check out your stats or submit a new entry.</h3>
+<h2>Check out your stats or submit a new entry.</h2>
 
 <table>
   <thead>
@@ -25,9 +25,10 @@
 
 
 
-<h1>Daily Step Amount: <%= @daily_steps %> </h1>
-<h1>Monthly Step Amount: <%= @monthly_steps %> </h1>
-<h1>Daily Calories Burned: <%= @daily_net_calories %> </h1>
+<h3>Daily Step Amount: <%= @daily_steps %> </h3>
+<h3>Monthly Step Amount: <%= @monthly_steps %> </h3>
+<h3>Daily Calories Burned: <%= @daily_net_calories %> </h3>
+<h3>Today's Weight: <%= @daily_total %> </h3>
 
 
 <%= link_to 'New Weight', new_weight_path %><br>

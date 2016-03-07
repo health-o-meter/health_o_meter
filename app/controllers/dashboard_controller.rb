@@ -11,5 +11,7 @@ class DashboardController < ApplicationController
 
     @daily_net_calories = @daily_grubs - @daily_exercises
 
+    @daily_total = Weight.daily_total
+
   end
 end

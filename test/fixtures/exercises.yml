@@ -2,10 +2,10 @@
 
 one:
   exercise_type_id: 1
-  energy_burned: 1
+  amount: 1
   date: 2015-03-06
 
 two:
   exercise_type_id: 1
-  energy_burned: 1
+  amount: 1
   date: 2015-03-06

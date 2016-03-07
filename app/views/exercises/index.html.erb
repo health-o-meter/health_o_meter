@@ -20,7 +20,7 @@
     <% @exercises.each do |exercise| %>
       <tr>
 
-        <td><%= exercise.energy_burned %></td>
+        <td><%= exercise.amount %></td>
         <td><%= exercise.date %></td>
         <td><%= link_to 'Details', exercise %></td>
         <td><%= link_to 'Edit', edit_exercise_path(exercise) %></td>

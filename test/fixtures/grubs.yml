@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  energy: 1
+  amount: 1
   date: 2015-03-06
 
 two:
   name: MyString
-  energy: 1
+  amount: 1
   date: 2015-03-06

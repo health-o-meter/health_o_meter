@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20160304170318) do
 
   create_table "exercises", force: :cascade do |t|
     t.integer  "exercise_type_id"
-    t.integer  "energy_burned"
+    t.integer  "amount"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.date     "date"
@@ -29,17 +29,17 @@ ActiveRecord::Schema.define(version: 20160304170318) do
 
   create_table "grubs", force: :cascade do |t|
     t.string   "name"
-    t.integer  "energy"
+    t.integer  "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.date     "date"
   end
 
   create_table "steps", force: :cascade do |t|
-    t.integer  "taken_steps"
+    t.integer  "amount"
     t.date     "date"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "weights", force: :cascade do |t|
