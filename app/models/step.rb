@@ -31,13 +31,13 @@ class Step < ActiveRecord::Base
     monthly.sum
   end
 
-  def self.daily_average 
-    current_month = Time.now.mon
-    current_year = Time.now.year
-    monthly = []
-    self.all.each do |x|
-    monthly << x.taken_steps if x.date.mon == current_month && x.date.year == current_year
-    end
-    monthly.sum
-  end
+  # def self.daily_average
+  #   current_month = Time.now.mon
+  #   current_year = Time.now.year
+  #   monthly = []
+  #   self.all.each do |x|
+  #   monthly << x.taken_steps if x.date.mon == current_month && x.date.year == current_year
+  #   end
+  #   monthly.sum
+  # end
 end
