@@ -12,14 +12,32 @@ class Step < ActiveRecord::Base
   end
 
   def self.weekly_total
-    start = Time.now.beginning_of_week
-    stop = Time.now.end_of_week
-    self.all.select {|e| e.created_at >= start && e.created_at <= stop}
+    current_week = Time.now.beginning_of_week
+    current_month = Time.now.mon
+    weekly = []
+    self.all.each do |x|
+    weekly << x.taken_steps if x.date.beginning_of_week == current_week && x.date.mon == current_month
+    end
+    weekly.sum
   end
 
-  def self.current_month
-    start = Time.now.beginning_of_month
-    stop = Time.now.end_of_month
-    self.all.select {|e| e.created_at >= start && e.created_at <= stop}
+  def self.monthly_total
+    current_month = Time.now.mon
+    current_year = Time.now.year
+    monthly = []
+    self.all.each do |x|
+    monthly << x.taken_steps if x.date.mon == current_month && x.date.year == current_year
+    end
+    monthly.sum
+  end
+
+  def self.daily_average 
+    current_month = Time.now.mon
+    current_year = Time.now.year
+    monthly = []
+    self.all.each do |x|
+    monthly << x.taken_steps if x.date.mon == current_month && x.date.year == current_year
+    end
+    monthly.sum
   end
 end
