@@ -12,8 +12,7 @@ class GrubsController < ApplicationController
     @grub = Grub.new
   end
 
-  def edit
-  end
+
 
   def create
     @grub = Grub.new(grub_params)
@@ -30,6 +29,11 @@ class GrubsController < ApplicationController
   end
 
   def destroy
+    @grub.destroy
+    respond_to do |format|
+      format.html { redirect_to grubs_url, notice: 'Grub was successfully destroyed.' }
+    end
+
   end
 
   def update

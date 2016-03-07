@@ -2,9 +2,13 @@ class Step < ActiveRecord::Base
   validates :date, presence: true
 
   def self.daily_total
-    start = Time.now.beginning_of_day
-    stop = Time.now.beginning_of_day
-    self.all.select {|e| e.created_at >= start && e.created_at <= stop}
+    current_day = Time.now.day
+    current_month = Time.now.mon
+    daily = []
+    self.all.each do |x|
+    daily << x.taken_steps if x.date.day == current_day && x.date.mon == current_month
+    end
+    daily.sum
   end
 
   def self.weekly_total

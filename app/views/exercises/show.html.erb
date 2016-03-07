@@ -4,14 +4,25 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Amount:</strong>
+  <strong>Energy Burned:</strong>
   <%= @exercise.energy_burned %>
 </p>
+
+<p>
+  <strong>Exercise Type:</strong>
+  <%= @exercise.exercise_type_id %>
+</p>
+
+
+
 
 <p>
   <strong>Date:</strong>
   <%= @exercise.date %>
 </p>
+
+
+
 
 <%= link_to 'Edit', edit_exercise_path(@exercise) %> |
 <%= link_to 'Back', exercises_path %>

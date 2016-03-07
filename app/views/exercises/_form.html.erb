@@ -15,7 +15,14 @@
     <%= f.label :energy_burned %><br>
     <%= f.number_field :energy_burned %>
   </div>
-  
+
+  <div class="field">
+    <%= f.label :exercise_type_id %><br>
+    <%= f.select :exercise_type_id, options_for_select(ExerciseType.all.map{|s| [s.name, s.id]}) %>
+  </div>
+
+
+
   <div class="field">
     <%= f.label :date %><br>
     <%= f.date_select :date %>
